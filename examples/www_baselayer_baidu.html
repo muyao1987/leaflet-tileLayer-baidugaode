@@ -4,14 +4,21 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
     <title>地图</title>
-
+	<style>
+        html, body, #map {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script> 
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script> 
 
-    <script src="../lib/leafletPlugins/proj4/proj4.js"></script>
-    <script src="../lib/leafletPlugins/proj4/proj4leaflet.js"></script>
+    <script src="https://cdn.bootcss.com/proj4js/2.4.3/proj4.js"></script>
+    <script src="https://cdn.bootcss.com/proj4leaflet/1.0.1/proj4leaflet.min.js"></script>
 
     <script src="../src/tileLayer.baidu.js"></script>
 </head>
@@ -46,8 +53,7 @@
                     "百度卫星-大字体": L.tileLayer.baidu({ layer: 'img', bigfont: true })
                 },
                 {
-                    "实时交通信息": L.tileLayer.baidu({ layer: 'time' }),
-                    "本地百度瓦片": L.tileLayer('http://localhost:8888/mapcache/baidu_vec/{z}/{x}/{y}.png', { tms: true })
+                    "实时交通信息": L.tileLayer.baidu({ layer: 'time' })
                 },
                 { position: "topright" }).addTo(map);
 
