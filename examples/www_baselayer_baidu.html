@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>地图</title>
+
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script> 
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script> 
+
+    <script src="../lib/leafletPlugins/proj4/proj4.js"></script>
+    <script src="../lib/leafletPlugins/proj4/proj4leaflet.js"></script>
+
+    <script src="../src/tileLayer.baidu.js"></script>
+</head>
+<body>
+
+     <div id="map" class="map"> 
+    </div>
+
+
+    <script type="text/javascript">
+
+        //初始化地图
+        $(document).ready(function () {
+
+
+            var map = L.map('map', {
+                crs: L.CRS.Baidu,
+                minZoom: 3,
+                maxZoom: 18,
+                attributionControl: false,
+                center: [31.834912, 117.220102],
+                zoom: 12
+            });
+
+
+            //控制地图底图
+            L.control.layers(
+                {
+                    "百度地图": L.tileLayer.baidu({ layer: 'vec' }).addTo(map),
+                    "百度卫星": L.tileLayer.baidu({ layer: 'img' }),
+                    "百度地图-大字体": L.tileLayer.baidu({ layer: 'vec',bigfont:true }),
+                    "百度卫星-大字体": L.tileLayer.baidu({ layer: 'img', bigfont: true })
+                },
+                {
+                    "实时交通信息": L.tileLayer.baidu({ layer: 'time' }),
+                    "本地百度瓦片": L.tileLayer('http://localhost:8888/mapcache/baidu_vec/{z}/{x}/{y}.png', { tms: true })
+                },
+                { position: "topright" }).addTo(map);
+
+
+            // test
+            new L.marker([31.839177, 117.232039]).addTo(map);
+
+
+
+
+        })
+    </script>
+
+</body>
+</html>
