@@ -1,6 +1,6 @@
 #leaflet加载百度地图 
  
-- 查看examples\www_baselayer_baidu.html 示例加载百度地图
+- leaflet加载百度地图 [demo](https://muyao1987.github.io/leaflet-tileLayer-baidu/examples/www_baselayer_baidu.html):
 ```javascript
   var layer = L.tileLayer.baidu({ layer: 'vec' });  //百度电子地图
   var layer = L.tileLayer.baidu({ layer: 'img' });             //百度卫星地图
@@ -11,5 +11,5 @@
   map.addLayer(layer);  
 ```
 
-- 查看examples\www_baselayer.html 示例加载谷歌和高德地图
+- leaflet加载中国谷歌和高德地图[demo](https://muyao1987.github.io/leaflet-tileLayer-baidu/examples/www_baselayer.html)
 
