@@ -4,6 +4,8 @@
 
 - leaflet加载百度地图 [example](https://muyao1987.github.io/leaflet-tileLayer-baidu/examples/www_baselayer_baidu.html):
 ```javascript
+  //注意将map的crs赋值 crs: L.CRS.Baidu 详情请阅读示例页面
+
   var layer = L.tileLayer.baidu({ layer: 'vec' });  //百度电子地图
   var layer = L.tileLayer.baidu({ layer: 'img' });             //百度卫星地图
   var layer = L.tileLayer.baidu({ layer: 'vec',bigfont:true });   //百度电子地图-大字体
