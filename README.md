@@ -10,11 +10,10 @@
   var layer = L.tileLayer.baidu({ layer: 'img', bigfont: true });   //百度卫星地图-大字体 
   var layer = L.tileLayer.baidu({ layer: 'time' })	//实时交通信息
   var layer = L.tileLayer.baidu({ layer: 'custom', customid:'dark' })  //自定义样式地图，customid可选值：dark,midnight,grayscale,hardedge,light,redalert,googlelite,grassgreen,pink,darkgreen,bluish
-
-  
   
   map.addLayer(layer);  
 ```
+ ![image](https://muyao1987.github.io/leaflet-tileLayer-baidu/examples/img/baidu.jpg)
 
  
 - leaflet加载互联网常见墨卡托坐标系地图，如天地图、高德、谷歌地图，重点在URL地址 [example](https://muyao1987.github.io/leaflet-tileLayer-baidu/examples/www_baselayer.html)
@@ -44,3 +43,5 @@
      L.tileLayer('http://mt1.google.cn/vt/imgtp=png32&lyrs=h@207000000&hl=zh-CN&gl=cn&x={x}&y={y}&z={z}&s=Galil')
  ]);
 ```
+
+ ![image](https://muyao1987.github.io/leaflet-tileLayer-baidu/examples/img/gaode.jpg)
