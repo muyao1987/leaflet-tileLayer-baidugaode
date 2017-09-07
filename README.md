@@ -23,8 +23,8 @@
 	    "百度卫星": L.tileLayer.baidu({ layer: 'img' }),
 	    "百度地图-大字体": L.tileLayer.baidu({ layer: 'vec',bigfont:true }),
 	    "百度卫星-大字体": L.tileLayer.baidu({ layer: 'img', bigfont: true }),
-				"自定义样式-黑色地图": L.tileLayer.baidu({ layer: 'custom', customid:'dark' }),
-				"自定义样式-蓝色地图": L.tileLayer.baidu({ layer: 'custom', customid:'midnight' })
+	    "自定义样式-黑色地图": L.tileLayer.baidu({ layer: 'custom', customid:'dark' }),
+	    "自定义样式-蓝色地图": L.tileLayer.baidu({ layer: 'custom', customid:'midnight' }) //自定义样式地图，customid可选值：dark,midnight,grayscale,hardedge,light,redalert,googlelite,grassgreen,pink,darkgreen,bluish
 	},
 	{
 	    "实时交通信息": L.tileLayer.baidu({ layer: 'time' })
