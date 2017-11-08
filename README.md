@@ -70,3 +70,7 @@
 ```
 
  ![image](https://muyao1987.github.io/leaflet-tileLayer-baidu/examples/img/gaode.jpg)
+
+---------------------------
+更多Leaflet示例请点击： [http://leaflet.marsgis.cn](http://leaflet.marsgis.cn)
+三维地图请点击： [http://cesium.marsgis.cn](http://cesium.marsgis.cn)
