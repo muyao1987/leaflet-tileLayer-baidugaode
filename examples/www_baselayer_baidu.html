@@ -1,11 +1,14 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
     <title>地图</title>
-	<style>
-        html, body, #map {
+    <style>
+        html,
+        body,
+        #map {
             padding: 0;
             margin: 0;
             height: 100%;
@@ -14,17 +17,18 @@
     </style>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 
     <script src="https://cdn.bootcss.com/proj4js/2.4.3/proj4.js"></script>
     <script src="https://cdn.bootcss.com/proj4leaflet/1.0.1/proj4leaflet.min.js"></script>
 
     <script src="../src/tileLayer.baidu.js"></script>
 </head>
+
 <body>
 
-     <div id="map" class="map"> 
+    <div id="map" class="map">
     </div>
 
 
@@ -33,7 +37,7 @@
         //初始化地图
         $(document).ready(function () {
 
-
+            //注意将map的crs赋值 crs: L.CRS.Baidu 详情请阅读示例页面 
             var map = L.map('map', {
                 crs: L.CRS.Baidu,
                 minZoom: 3,
@@ -45,19 +49,16 @@
 
 
             //控制地图底图
-            L.control.layers(
-                {
-                    "百度地图": L.tileLayer.baidu({ layer: 'vec' }).addTo(map),
-                    "百度卫星": L.tileLayer.baidu({ layer: 'img' }),
-                    "百度地图-大字体": L.tileLayer.baidu({ layer: 'vec',bigfont:true }),
-                    "百度卫星-大字体": L.tileLayer.baidu({ layer: 'img', bigfont: true }),
-					"自定义样式-黑色地图": L.tileLayer.baidu({ layer: 'custom', customid:'dark' }),
-					"自定义样式-蓝色地图": L.tileLayer.baidu({ layer: 'custom', customid:'midnight' })
-                },
-                {
-                    "实时交通信息": L.tileLayer.baidu({ layer: 'time' })
-                },
-                { position: "topright" }).addTo(map);
+            L.control.layers({
+                "百度地图": L.tileLayer.baidu({ layer: 'vec' }).addTo(map),
+                "百度卫星": L.tileLayer.baidu({ layer: 'img' }),
+                "百度地图-大字体": L.tileLayer.baidu({ layer: 'vec', bigfont: true }),
+                "百度卫星-大字体": L.tileLayer.baidu({ layer: 'img', bigfont: true }),
+                "自定义样式-黑色地图": L.tileLayer.baidu({ layer: 'custom', customid: 'dark' }),
+                "自定义样式-蓝色地图": L.tileLayer.baidu({ layer: 'custom', customid: 'midnight' }) //自定义样式地图，customid可选值：dark,midnight,grayscale,hardedge,light,redalert,googlelite,grassgreen,pink,darkgreen,bluish
+            }, {
+                "实时交通信息": L.tileLayer.baidu({ layer: 'time' })
+            }, { position: "topright" }).addTo(map);
 
 
             // test
@@ -70,4 +71,5 @@
     </script>
 
 </body>
+
 </html>

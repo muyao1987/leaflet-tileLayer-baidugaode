@@ -1,5 +1,7 @@
-﻿//百度地图底图调用插件，木遥原创（QQ：346819890）
-
+﻿/** 
+ * 百度地图底图调用插件
+ * @author 火星科技 木遥原创(qq:346819890) 
+ */
 //请引入 proj4.js 和 proj4leaflet.js
 L.CRS.Baidu = new L.Proj.CRS('EPSG:900913', '+proj=merc +a=6378206 +b=6356584.314245179 +lat_ts=0.0 +lon_0=0.0 +x_0=0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs', {
     resolutions: function () {
