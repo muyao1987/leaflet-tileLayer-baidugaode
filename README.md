@@ -1,7 +1,7 @@
 # Leaflet加载国内百度、高德、谷歌、天地图等地图 
 
 ## 加载百度地图
-  [在线Demo](http://mars2d.cn/example/11_online_baidu.html)
+  [在线Demo](http://mars2d.cn/editor.html?id=layer-tile/online/baidu)
 
 ```javascript
   //注意将map的crs赋值 crs: L.CRS.Baidu 详情请阅读示例页面 
@@ -33,9 +33,10 @@ L.control.layers({
 ## 加载天地图、高德、谷歌地图
   加载互联网常见墨卡托坐标系地图，如天地图、高德、谷歌地图。重点在URL地址。
   
-   [高德在线Demo](http://mars2d.cn/example/11_online_gaode.html)  、
-   [谷歌在线Demo](http://mars2d.cn/example/11_online_google.html)、
-   [天地图在线Demo](http://mars2d.cn/example/11_online_tdt.html)
+   [高德在线Demo](http://mars2d.cn/editor.html?id=layer-tile/online/gaode)、
+   [谷歌在线Demo](http://mars2d.cn/editor.html?id=layer-tile/online/google)、
+   [腾讯在线Demo](http://mars2d.cn/editor.html?id=layer-tile/online/tentect)、
+   [天地图在线Demo](http://mars2d.cn/editor.html?id=layer-tile/online/tdt)
 
 ```javascript
 //控制地图底图
